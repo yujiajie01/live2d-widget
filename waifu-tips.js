@@ -188,7 +188,7 @@ function loadWidget(waifuPath, apiPath) {
 		localStorage.setItem("modelId", modelId);
 		if (modelTexturesId === undefined) modelTexturesId = 0;
 		localStorage.setItem("modelTexturesId", modelTexturesId);
-		loadlive2d("live2d", `${apiPath}/get/?id=${modelId}-${modelTexturesId}`, console.log(`Live2D 模型 ${modelId}-${modelTexturesId} 加载完成`));
+		loadlive2d("live2d", `${apiPath}/get/?id=${modelId}-${modelTexturesId}`, console.log(`Live2D 模型  ${modelId}-${modelTexturesId} 加载完成 \n--by niko `));
 	}
 
 	function loadRandModel() {
@@ -200,8 +200,8 @@ function loadWidget(waifuPath, apiPath) {
 			url: `${apiPath}/rand_textures/?id=${modelId}-${modelTexturesId}`,
 			dataType: "json",
 			success: function(result) {
-				if (result.textures["id"] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) showMessage("我还没有其他衣服呢！", 4000, 10);
-				else showMessage("我的新衣服好看嘛？", 4000, 10);
+				if (result.textures["id"] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) showMessage("宝宝没衣服穿了！", 4000, 10);
+				else showMessage("我骚嘛？", 4000, 10);
 				loadModel(modelId, result.textures["id"]);
 			}
 		});
@@ -223,7 +223,7 @@ function loadWidget(waifuPath, apiPath) {
 
 function initWidget(waifuPath = "/waifu-tips.json", apiPath = "") {
 	if (screen.width <= 768) return;
-	$("body").append(`<div id="waifu-toggle" style="margin-left: -100px;">
+	$("body").append(`<div id="waifu-toggle" style="margin-right: -100px;">
 			<span>看板娘</span>
 		</div>`);
 	$("#waifu-toggle").hover(() => {
