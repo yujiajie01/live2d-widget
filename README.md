@@ -10,6 +10,10 @@ Add Live2D widget to web page. Compatible with PJAX.
 
 ## 示例 Demo
 
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>  
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>  
+
 在[米米的博客](https://zhangshuqiao.org)的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。
 
 ![](assets/screenshot-1.png)
